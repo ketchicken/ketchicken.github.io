@@ -31,12 +31,16 @@
         <h3>It's you birthday! Congratulations!</h3>
         <p>Drag the cake into the oven to bake it!</p>
     </div>
-    <div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
-        <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)" width="130" height="90">
+    <div class="flex-container">
+        <div class="small-grid" id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)" width="130"
+                height="90">
+        </div>
+        <div class="small-grid" id="div2">
+            <img id="drag2" src="/img/cake_cooked.png" draggable="false" width="130" height="90">
+        </div>
     </div>
-    <div id="div2">
-        <img id="drag2" src="/img/cake_cooked.png" draggable="false" width="130" height="90">
-    </div>
+
 </body>
 
 <audio autoplay loop>
