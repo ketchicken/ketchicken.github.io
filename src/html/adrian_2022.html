@@ -14,23 +14,17 @@
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        //document.getElementById("drag1").style.display = "none";
-        //document.getElementById("drag2").style.display = "block";
+
         let newimg = document.getElementById("ogdrag2");
         newimg.src = "/img/cake_candleflicker.gif";
         document.getElementById("drag1").style.display = "none";
     }
-    /**document.addEventListener("dragend", function (event) {
-        let newimg = document.getElementById("ogdrag2");
-        newimg.src = "/img/cake_candleflicker.gif";
-        document.getElementById("drag1").style.display = "none";
-    });**/
 </script>
 
 <body>
-    <h1>Happy Birthday!</h1>
+    <h1>Happy Birthday Adrian "Ares" "Lysander" "Thomas Diaforus" "etc" Rocha!</h1>
     <div>
-        <h3>It's you birthday! Congratulations!</h3>
+        <h3>It's you birthday! Congratulations on making it to the double digits!</h3>
         <p>Drag the cake into the oven to bake it!</p>
     </div>
     <div class="flex-container">
