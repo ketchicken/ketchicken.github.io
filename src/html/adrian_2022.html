@@ -14,29 +14,25 @@
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        document.getElementById("drag1").style.display = "none";
+        //document.getElementById("drag1").style.display = "none";
+        //document.getElementById("drag2").style.display = "block";
+    }
+    document.addEventListener("dragend", function (event) {
         document.getElementById("drag2").style.display = "block";
-    }
-
-    function mlem(ev) {
-        document.getElementById("drag2").style.display = "none";
-    }
+        document.getElementById("drag1").style.display = "none";
+    });
 </script>
 
-<body onloadstart="mlem(event)">
+<body>
     <h1>Happy Birthday!</h1>
     <div>
         <h3>It's you birthday! Congratulations!</h3>
         <p>Drag the cake into the oven to bake it!</p>
     </div>
     <div class="flex-container">
-        <div class="small-grid">
-            <div id="div1">
-                <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)" width="130"
-                    height="90">
-            </div>
+        <div class="small-grid" id="div1">
+            <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)">
         </div>
-
         <div class="small-grid2" id="div2" ondragover="allowDrop(event)" ondrop="drop(event)">
             <img id="drag2" src="/img/cake_candleflicker.gif" draggable="false" width="130" height="90">
         </div>
