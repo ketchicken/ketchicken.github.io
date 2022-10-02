@@ -1,3 +1,9 @@
+.header {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20vh;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -5,19 +11,27 @@
     height: 200vh;
 }
 
-.flex-container>div {
+div .small-grid {
     background-color: gray;
-    margin: 10vh;
-    padding: 20vh;
+    width: 130px;
+    height: 90px;
 }
 
-.small-grid {
-    background-color: gray;
-    margin: 5vh;
-    padding: 15vh;
+div .small-grid2 {
+    width: 130px;
+    height: 90px;
+    background-color: wheat;
+    animation-name: candle;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
 }
 
-.small-grid2 {
-    background-image: url("/img/cake_cooked.png");
+@keyframes candle {
+    from {
+        background-image: url(/img/cake_cooked.png);
+    }
 
+    to {
+        background-image: url(/img/cake_cooked2.png);
+    }
 }

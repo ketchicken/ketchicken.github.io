@@ -23,21 +23,22 @@
     }
 </script>
 
-<body onload="mlem(event)">
-    <div class="horizontal-box">
-        <h1>Happy Birthday!</h1>
-    </div>
-    <div class="half-box">
+<body>
+    <h1>Happy Birthday!</h1>
+    <div>
         <h3>It's you birthday! Congratulations!</h3>
         <p>Drag the cake into the oven to bake it!</p>
     </div>
     <div class="flex-container">
-        <div class="small-grid" id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
-            <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)" width="130"
-                height="90">
+        <div class="small-grid">
+            <div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <img id="drag1" src="/img/cake_batter.png" draggable="true" ondragstart="drag(event)" width="130"
+                    height="90">
+            </div>
         </div>
+
         <div class="small-grid2" id="div2">
-            <!--<img id="drag2" src="/img/cake_cooked.png" draggable="false" width="130" height="90">-->
+            <img id="drag2" src="/img/cake_cooked.png" width="130" height="90">
         </div>
     </div>
 
