@@ -6,3 +6,13 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+
+.bday-link {
+    background-image: none;
+    color: lightcyan;
+    border: 3vh solid salmon;
+    margin: 10vh;
+    padding: 10vh;
+}
+
+.horizontal-box {}
