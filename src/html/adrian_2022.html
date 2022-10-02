@@ -15,7 +15,7 @@
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
         document.getElementById("drag1").style.display = "none";
-        //document.getElementById("drag2").style.display = "block";
+        document.getElementById("drag2").style.display = "block";
     }
 
     function mlem(ev) {
@@ -23,7 +23,7 @@
     }
 </script>
 
-<body>
+<body onloadstart="mlem(event)">
     <h1>Happy Birthday!</h1>
     <div>
         <h3>It's you birthday! Congratulations!</h3>
@@ -38,6 +38,7 @@
         </div>
 
         <div class="small-grid2" id="div2" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="drag2" src="/img/cake_candleflicker.gif" draggable="false" width="130" height="90">
         </div>
     </div>
 
