@@ -1,0 +1,23 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200vh;
+}
+
+.flex-container>div {
+    background-color: gray;
+    margin: 10vh;
+    padding: 20vh;
+}
+
+.small-grid {
+    background-color: gray;
+    margin: 5vh;
+    padding: 15vh;
+}
+
+.small-grid2 {
+    background-image: url("/img/cake_cooked.png");
+
+}
