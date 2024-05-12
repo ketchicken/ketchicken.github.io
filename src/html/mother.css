@@ -4,6 +4,10 @@
     gap: 20px
   }
 
+  .clickyflor {
+	position:absolute;
+  }
+
 #textbox {
 	
 	/*Sets a border*/

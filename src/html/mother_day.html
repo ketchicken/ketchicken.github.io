@@ -12,12 +12,24 @@
         <p>抱歉，我这几天好忙，我买不起花-- 能麻烦你自己采几朵花吗?</p>
     </div>
     <div class="grid-container">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor1" src="/img/flor_individuals/000.png">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor2" src="/img/flor_individuals/002.png">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor3" src="/img/flor_individuals/003.png">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor4" src="/img/flor_individuals/004.png">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor5" src="/img/flor_individuals/005.png">
-        <img onclick="clickFlor(this)" class="clickyflor" id="flor6" src="/img/flor_individuals/006.png">
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor1" src="/img/flor_individuals/000.png">
+        </div>
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor2" src="/img/flor_individuals/002.png">
+        </div>
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor3" src="/img/flor_individuals/003.png">
+        </div>
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor4" src="/img/flor_individuals/004.png">
+        </div>
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor5" src="/img/flor_individuals/005.png">
+        </div>
+        <div>
+            <img onclick="clickFlor(this)" class="clickyflor" id="flor6" src="/img/flor_individuals/006.png">
+        </div>
         <!-- sad flower -->
         <a href='src/html/mother_day_quest.html'>
             <img src="/img/flor_individuals/sad.png">
@@ -36,7 +48,7 @@ function clickFlor(elem){
     var pos = 0;
     var opacity = 1;
     function flowerpicked(){
-        if (pos == -350) {
+        if (opacity==0) {
             clearInterval(id);
             elem.style.opacity = 0;
             elem.disable = true;
