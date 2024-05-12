@@ -28,10 +28,6 @@
 	
 	/*Positioning in container*/
 	margin: auto;
-	position: absolute;
-	bottom: 2%;
-	left: 50%;
-	transform: translate(-50%, 0);
 }
 
 
