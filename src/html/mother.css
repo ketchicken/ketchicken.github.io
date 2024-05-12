@@ -57,8 +57,11 @@
 	left: 5%;
 }
 
-#spritebox img{
+.spritebox {
+	text-align:right;
+}
+
+.spritebox img{
 	scale: 500%;
 	object-fit:cover;
-	text-align:right;
 }
