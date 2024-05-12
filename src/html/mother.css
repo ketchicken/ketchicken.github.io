@@ -59,4 +59,5 @@
 
 #spritebox img{
 	scale: 500%;
+	object-fit:cover;
 }
