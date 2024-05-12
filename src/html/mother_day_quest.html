@@ -95,7 +95,8 @@ function handleOptions(data){
 
 function checkPage(data){
 	if(data.Scene1.PAGES[currentPage].hasOwnProperty('Options')) return false;
-	if(data.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')) {
+	
+    if(data.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')) {
 		if(data.Scene1.PAGES[currentPage].NextPage == "End") return false;
 	}
 	
