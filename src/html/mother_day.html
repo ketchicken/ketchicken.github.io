@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<meta name="viewport" content="width=device-width">
 <style>
     body {
       background-image: url("/img/flowerfield.png");
@@ -11,23 +11,24 @@
         <p>抱歉，我这几天好忙，我买不起花-- 能麻烦你自己采几朵花吗?</p>
     </div>
     <div class="flex-container">
-        <img onclick="clickFlor(this)" class="clickyflor" src="/img/flowers/000.png">
+        <img onclick="clickFlor(this)" class="clickyflor" src="/img/flor_individuals/000.png">
         <div class="florbox" id="div2" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/002.png">
+            <img class="clickyflor" src="/img/flor_individuals/002.png">
         </div>
         <div class="florbox" id="div3" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/003.png">
+            <img class="clickyflor" src="/img/flor_individuals/003.png">
         </div>
         <div class="florbox" id="div4" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/004.png">
+            <img class="clickyflor" src="/img/flor_individuals/004.png">
         </div>
         <div class="florbox" id="div5" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/005.png">
+            <img class="clickyflor" src="/img/flor_individuals/005.png">
         </div>
         <div class="florbox" id="div5" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/006.png">
+            <img class="clickyflor" src="/img/flor_individuals/006.png">
         </div>
-<!-- clickable flowers, put in vase, go get other stuff for mother's day> -->
+        <!-- sad flower -->
+        <img class="clickyflor" src="/img/flor_individuals/sad.png">
         </div>
     </div>
 
@@ -37,17 +38,17 @@
 var id = null;
 function clickFlor(elem){
     clearInterval(id)
-    id = setInterval(flowerpicked, 20);
+    id = setInterval(flowerpicked, 10);
     var pos = 0;
     function flowerpicked(){
-        if (pos == 25){
+        if (pos == 60){
             clearInterval(id);
             elem.style.opacity == 0;
             elem.onclick = null;
         }else{
             pos++;
             elem.style.top = pos + 'px';
-            elem.style.opacity -= 0.05
+            elem.style.opacity -= 0.05;
         }
     }
 }
