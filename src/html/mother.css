@@ -36,11 +36,13 @@
 
 
 #optionsbox{
-	color:rgb(255, 191, 212);
+	background-color:rgb(255, 191, 212);
+	color:black;
 }
 
 #optionsbox > div:hover{
-	color:rgb(175, 161, 226);
+	background-color:rgb(175, 161, 226);
+	color:white;
 	cursor:pointer;
 }
 

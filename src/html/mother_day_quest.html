@@ -18,12 +18,12 @@
 	<div id='mainbox'>
 		<div id='spritebox'> 
 				
-			</div>
+		</div>
+        <div id="optionsbox">
+
+        </div>
 		<div id='textbox'>
 			<p>text</p>
-            <div id="optionsbox">
-
-            </div>
 		</div>
 	</div>
 
@@ -66,7 +66,7 @@ async function initialize(data){
 	$textbox.innerText = ''; 
 	
 	//Changes appropriate HTML elements to the new attributes based on the data given when page turns/ program is initialized
-	$spritebox.src = "/img/flor_individuals/sad.png";
+	$spritebox.src = "img/flor_individuals/sad.png";
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
 	
