@@ -58,6 +58,5 @@
 }
 
 #spritebox img{
-	/*Ensures that image doesn't exceed box size*/
 	scale: 500%;
 }
