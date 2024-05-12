@@ -43,9 +43,16 @@ function clickFlor(clicked){
     id = setInterval(flowerpicked, 20);
     var pos = 0;
     function flowerpicked(){
-        if 
+        if (pos == 25){
+            clearInterval(id);
+        }else{
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.opacity -= 0.05
+        }
     }
-    
+    elem.style.opacity == 0;
+    elem.onclick = null;
 }
 </script>
 
