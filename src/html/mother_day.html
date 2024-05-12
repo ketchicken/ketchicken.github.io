@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="mother.css">
 <style>
     body {
       background-image: url("/img/flowerfield.png");
@@ -18,7 +19,7 @@
         <img onclick="clickFlor(this)" class="clickyflor" id="flor5" src="/img/flor_individuals/005.png">
         <img onclick="clickFlor(this)" class="clickyflor" id="flor6" src="/img/flor_individuals/006.png">
         <!-- sad flower -->
-        <img class="clickyflor" src="/img/flor_individuals/sad.png">
+        <img onclick="href='src/html/mother_day_quest.html'" src="/img/flor_individuals/sad.png">
         </div>
     </div>
 
@@ -27,7 +28,7 @@
 <script>
 var id = null;
 function clickFlor(elem){
-    clearInterval(id)
+    clearInterval(id);
     id = setInterval(flowerpicked, 20);
     var pos = 0;
     var opacity = 1;
@@ -43,6 +44,9 @@ function clickFlor(elem){
             elem.style.opacity = opacity;
         }
     }
+}
+function startQuest(){
+    clearInterval(id);
 }
 </script>
 
