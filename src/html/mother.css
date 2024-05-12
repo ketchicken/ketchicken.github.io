@@ -60,5 +60,5 @@
 #spritebox img{
 	scale: 500%;
 	object-fit:cover;
-	right:0px;
+	text-align:right;
 }
