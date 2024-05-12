@@ -10,7 +10,7 @@
     <div>
         <p>抱歉，我这几天好忙，我买不起花-- 能麻烦你自己采几朵花吗?</p>
     </div>
-    <div class="flex-container">
+    <div class="grid-container">
         <img onclick="clickFlor(this)" class="clickyflor" src="/img/flor_individuals/000.png">
         <div class="florbox" id="div2" onclick="clickFlor(this)">
             <img class="clickyflor" src="/img/flor_individuals/002.png">
@@ -43,8 +43,7 @@ function clickFlor(elem){
     function flowerpicked(){
         if (pos == 60){
             clearInterval(id);
-            elem.style.opacity == 0;
-            elem.onclick = null;
+            
         }else{
             pos++;
             elem.style.top = pos + 'px';
