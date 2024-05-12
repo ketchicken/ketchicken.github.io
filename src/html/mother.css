@@ -60,4 +60,6 @@
 #spritebox img{
 	scale: 500%;
 	object-fit:cover;
+	right: -7%;
+	bottom: -5%;
 }
