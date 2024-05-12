@@ -7,7 +7,7 @@
     }
     </style>
 <body>
-    <h1>母情节快乐！！</h1>
+    <h1>母情节快乐！</h1>
     <div>
         <p>抱歉，我这几天好忙，我买不起花-- 能麻烦你自己采几朵花吗?</p>
     </div>
@@ -19,7 +19,7 @@
         <img onclick="clickFlor(this)" class="clickyflor" id="flor5" src="/img/flor_individuals/005.png">
         <img onclick="clickFlor(this)" class="clickyflor" id="flor6" src="/img/flor_individuals/006.png">
         <!-- sad flower -->
-        <a href='/mother_day_quest.html'>
+        <a href='src/html/mother_day_quest.html'>
             <img src="/img/flor_individuals/sad.png">
         </a>
         
@@ -36,18 +36,19 @@ function clickFlor(elem){
     var pos = 0;
     var opacity = 1;
     function flowerpicked(){
-        if (pos == -30){
+        if (pos == -350) {
             clearInterval(id);
             elem.style.opacity = 0;
-            elem.disabled = true;
-        }else{
-            pos--;
-            opacity -= 0.005;
-            elem.style.top = pos + 'px';
+            elem.disable = true;
+        } else {
+            pos--; 
+            elem.style.top = pos + 'px'; 
+            opacity-= 0.005
             elem.style.opacity = opacity;
         }
     }
 }
+
 function startQuest(){
     clearInterval(id);
 }
