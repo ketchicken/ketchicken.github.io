@@ -8,23 +8,35 @@
 			"Page0" : {
 				"Character": "Flower",
 				"PageText": "...",
-				"Options": "你还好吗？"
+				"Options": {
+                    "你还好吗？" : "Page1"
+                }
+ 
 			},
             "Page1" : {
                 "Character": "Flower",
                 "PageText": "我没有妈妈。拜托您帮我找一位妈妈吗？",
-				"Options": "行"
+				"Options": {
+                    "行" : "Page2"
+                }
             },
             "Page2" : {
                 "Character": "Flower",
                 "PageText": "喂。您看着像一个很好心，很能管好人，煮饭能力很棒的人。您能当我的妈妈吗？",
-				"Options": "...好吧？"
+				"Options": {
+                    "...好吧？":"Page3"
+                }
             },
             "Page3" :{
                 "Character": "Flower",
                 "PageText": "那就拜托你了！",
-				"Options": "(⊙o⊙)？"
+				"Options": {
+                    "(⊙o⊙)?":"Page4"
+                }
+            },
+            "Page4" : {
+                "NextPage": "End"
             }
-        }
+        } 
     }
 }
