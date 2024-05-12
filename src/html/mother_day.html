@@ -36,14 +36,14 @@ function clickFlor(elem){
     var pos = 0;
     var opacity = 1;
     function flowerpicked(){
-        if (pos == 60){
+        if (pos == -30){
             clearInterval(id);
             elem.style.opacity = 0;
             elem.disabled = true;
         }else{
             pos++;
             opacity -= 0.005;
-            elem.style.top = pos + '5px';
+            elem.style.top = pos - 'px';
             elem.style.opacity = opacity;
         }
     }
