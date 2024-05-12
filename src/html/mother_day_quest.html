@@ -113,7 +113,7 @@ document.addEventListener('keydown', (e) => {
 		}
 		else {
 			pageNum++;
-			currentPage = json.Scene1.PAGES[currentPage].NextPage;
+			currentPage = json.Scene1.PAGES[pageNum];
 		}
 		
 		initialize(json);
