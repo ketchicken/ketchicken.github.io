@@ -31,7 +31,7 @@
             <img onclick="clickFlor(this)" class="clickyflor" id="flor6" src="/img/flor_individuals/006.png">
         </div>
         <!-- sad flower -->
-        <a href='src/html/mother_day_quest.html'>
+        <a href='/src/html/mother_day_quest.html'>
             <img src="/img/flor_individuals/sad.png">
         </a>
         
@@ -44,18 +44,18 @@
 var id = null;
 function clickFlor(elem){
     clearInterval(id);
-    id = setInterval(flowerpicked, 20);
-    var pos = 0;
+    id = setInterval(flowerpicked, 10);
+    var pos = elem.style.top;
     var opacity = 1;
     function flowerpicked(){
-        if (opacity==0) {
+        if (opacity==0.45) {
             clearInterval(id);
             elem.style.opacity = 0;
             elem.disable = true;
         } else {
             pos--; 
             elem.style.top = pos + 'px'; 
-            opacity-= 0.005
+            opacity-= 0.05
             elem.style.opacity = opacity;
         }
     }
