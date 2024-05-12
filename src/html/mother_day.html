@@ -28,8 +28,9 @@
 var id = null;
 function clickFlor(elem){
     clearInterval(id)
-    id = setInterval(flowerpicked, 50);
+    id = setInterval(flowerpicked, 20);
     var pos = 0;
+    var opacity = 1;
     function flowerpicked(){
         if (pos == 60){
             clearInterval(id);
@@ -37,8 +38,9 @@ function clickFlor(elem){
             elem.onclick = null;
         }else{
             pos++;
+            opacity -= 0.05;
             elem.style.top = pos + 'px';
-            elem.style.opacity -= 0.05;
+            elem.style.opacity = opacity;
         }
     }
 }
