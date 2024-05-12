@@ -41,9 +41,9 @@ function clickFlor(elem){
             elem.style.opacity = 0;
             elem.disabled = true;
         }else{
-            pos++;
+            pos--;
             opacity -= 0.005;
-            elem.style.top = pos - 'px';
+            elem.style.top = pos + 'px';
             elem.style.opacity = opacity;
         }
     }
