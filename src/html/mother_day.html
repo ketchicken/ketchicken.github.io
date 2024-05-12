@@ -11,9 +11,7 @@
         <p>抱歉，我这几天好忙，我买不起花-- 能麻烦你自己采几朵花吗?</p>
     </div>
     <div class="flex-container">
-        <div class="florbox" id="div1" onclick="clickFlor(this)">
-            <img class="clickyflor" src="/img/flowers/000.png">
-        </div>
+        <img onclick="clickFlor(this)" class="clickyflor" src="/img/flowers/000.png">
         <div class="florbox" id="div2" onclick="clickFlor(this)">
             <img class="clickyflor" src="/img/flowers/002.png">
         </div>
@@ -44,14 +42,14 @@ function clickFlor(elem){
     function flowerpicked(){
         if (pos == 25){
             clearInterval(id);
+            elem.style.opacity == 0;
+            elem.onclick = null;
         }else{
             pos++;
             elem.style.top = pos + 'px';
             elem.style.opacity -= 0.05
         }
     }
-    elem.style.opacity == 0;
-    elem.onclick = null;
 }
 </script>
 
