@@ -1,8 +1,5 @@
-.clickyflor {
-    position: fixed;
-}
-
 .grid-container {
     display: grid;
-    grid-template-columns: 426 426 426;
+    grid-template-columns: 400px 400px 400px;
+    gap: 20px
   }
