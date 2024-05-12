@@ -4,7 +4,64 @@
     gap: 20px
   }
 
-.flor-zoom {
-    display:inline-flex;
-    scale: 50;
+#textbox {
+	
+	/*Sets a border*/
+	border: 0.125vmin solid var(white);
+	
+	/*Sets a background color*/
+	background: var(black);
+	
+	/*Sets size and padding*/
+	width: 95%;
+	height: 20%;
+	padding: 0.5rem;
+	
+	/*Makes text scrollable*/
+	overflow: auto;
+	word-break: break-word;
+	
+	/*Positioning in container*/
+	margin: auto;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+
+#optionsbox{
+	color:rgb(255, 191, 212);
+}
+
+#optionsbox > div:hover{
+	color:rgb(175, 161, 226);
+	cursor:pointer;
+}
+
+#spritebox{
+	
+	/*Sets size*/
+	max-width: 45%;
+	
+	/*Positioning in container*/
+	z-index: -1;
+	position: absolute;
+	bottom: 20%; 
+}
+
+.rightalign{
+	/*Right alignment class for the sprite*/
+	right: -7%;
+	bottom:-5%;
+}
+
+.leftalign{
+	/*Left alignment class for the sprite*/
+	left: 5%;
+}
+
+#spritebox img{
+	/*Ensures that image doesn't exceed box size*/
+	max-width:100%;
 }
