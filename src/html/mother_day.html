@@ -35,7 +35,7 @@ function clickFlor(elem){
         if (pos == 60){
             clearInterval(id);
             elem.style.opacity = 0;
-            elem.onclick = null;
+            elem.disabled = true;
         }else{
             pos++;
             opacity -= 0.005;
