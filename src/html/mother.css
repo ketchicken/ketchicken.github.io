@@ -1,4 +1,9 @@
-div .florbox {
-    width: 500px;
+.clickyflor {
     position: fixed;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
