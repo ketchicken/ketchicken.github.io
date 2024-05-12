@@ -45,7 +45,7 @@ var id = null;
 function clickFlor(elem){
     clearInterval(id);
     id = setInterval(flowerpicked, 10);
-    var pos = elem.style.top;
+    var pos = elem.style.top- '30px';
     var opacity = 1;
     function flowerpicked(){
         if (opacity==0.45) {
@@ -59,10 +59,6 @@ function clickFlor(elem){
             elem.style.opacity = opacity;
         }
     }
-}
-
-function startQuest(){
-    clearInterval(id);
 }
 </script>
 
