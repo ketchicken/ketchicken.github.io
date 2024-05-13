@@ -69,8 +69,10 @@ async function initialize(data){
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
 	$optionsbox.innerHTML = data.Scene1.PAGES[currentPage].Options;
-	$optionsbox.addEventListner('click', () => {
+	$optionsbox.addEventListener('click', () => {
 		currentPage = json.Scene1.PAGES[currentPage].NextPage;
+		pageNum = Object.keys(json.Scene1.PAGES).indexOf(currentPage);
+		initialize(json)
 	})
 	
 }
