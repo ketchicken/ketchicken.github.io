@@ -67,6 +67,7 @@ async function initialize(data){
 	//Changes appropriate HTML elements to the new attributes based on the data given when page turns/ program is initialized
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
+	$optionsbox.innerText = data.Scene1.PAGES[currentPage].Options;
 	
 }
 
@@ -85,7 +86,6 @@ function handleOptions(data){
 				currentPage = (o[k]);
 				pageNum = Object.keys(json.Scene1.PAGES).indexOf(currentPage);
 				initialize(json); 
-				$optionsbox.innerHTML = "";
 			})
 			
 		})
@@ -95,11 +95,6 @@ function handleOptions(data){
 
 function checkPage(data){
 	if(data.Scene1.PAGES[currentPage].hasOwnProperty('Options')) return false;
-	
-    if(data.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')) {
-		if(data.Scene1.PAGES[currentPage].NextPage == "End") return false;
-	}
-	
 	return true;
 }
 
@@ -110,6 +105,10 @@ document.addEventListener('keydown', (e) => {
 		
 		if(json.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')){
 			currentPage = json.Scene1.PAGES[currentPage].NextPage;
+
+			if(json.Scene1.PAGES[currentPage].NextPage == "End"){
+				window.location.href="mother_day_ending.html"
+			};
 		}
 		else {
 			pageNum++;
