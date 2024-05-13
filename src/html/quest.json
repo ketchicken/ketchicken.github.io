@@ -3,19 +3,23 @@
     	"PAGES": {
 			"Page0" : {
 				"PageText": "...",
-				"Options": "你还好吗？"
+				"Options": "你还好吗？",
+                "NextPage":  "Page1"
 			},
             "Page1" : {
                 "PageText": "我没有妈妈。拜托您帮我找一位妈妈吗？",
-				"Options": "行"
+				"Options": "行",
+                "NextPage":  "Page2"
             },
             "Page2" : {
                 "PageText": "喂。您看着像一个很好心，很能管好人，煮饭能力很棒的人。您能当我的妈妈吗？",
-				"Options": "...好吧？"
+				"Options": "...好吧？",
+                "NextPage":  "Page3"
             },
             "Page3" :{
                 "PageText": "那就拜托你了！",
-				"Options": "(⊙o⊙)?"
+				"Options": "(⊙o⊙)?",
+                "NextPage":  "Page4"
             },
             "Page4" : {
                 "NextPage": "End"

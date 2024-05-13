@@ -68,7 +68,10 @@ async function initialize(data){
 	//Changes appropriate HTML elements to the new attributes based on the data given when page turns/ program is initialized
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
-	$optionsbox.innerText = data.Scene1.PAGES[currentPage].Options;
+	$optionsbox.innerHTML = data.Scene1.PAGES[currentPage].Options;
+	$optionsbox.addEventListner('click', () => {
+		currentPage = json.Scene1.PAGES[currentPage].NextPage;
+	})
 	
 }
 
