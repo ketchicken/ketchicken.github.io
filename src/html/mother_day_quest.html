@@ -69,9 +69,10 @@ async function initialize(data){
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
 
-	const row = document.createElement('div');
-	row.innerHTML = data.Scene1.PAGES[currentPage].Options[0];
-	$optionsbox.addEventListener('click', () => {
+	const opt = document.createElement('div');
+	opt.innerHTML = data.Scene1.PAGES[currentPage].Options;
+	$optionsbox.appendChild(opt);
+	opt.addEventListener('click', () => {
 		currentPage = json.Scene1.PAGES[currentPage].NextPage;
 		pageNum = Object.keys(json.Scene1.PAGES).indexOf(currentPage);
 		initialize(json)
