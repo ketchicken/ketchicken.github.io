@@ -69,7 +69,7 @@ async function initialize(data){
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
 
 	
-	if(!checkPage){
+	if(!(pageNum==4)){
 		const opt = document.createElement('div');
 		opt.innerHTML = data.Scene1.PAGES[currentPage].Options;
 		$optionsbox.appendChild(opt);
