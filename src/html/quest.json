@@ -22,6 +22,7 @@
                 "NextPage":  "Page4"
             },
             "Page4" : {
+                "PageText": "(Press Space to continue)",
                 "NextPage": "End"
             }
         } 

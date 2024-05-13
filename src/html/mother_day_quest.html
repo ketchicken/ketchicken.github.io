@@ -56,7 +56,6 @@ async function grabData() {
 	
 	// Initialize the data 
 	initialize(json);
-	handleOptions(json);
 	
 }
 
@@ -73,32 +72,10 @@ async function initialize(data){
 	opt.innerHTML = data.Scene1.PAGES[currentPage].Options;
 	$optionsbox.appendChild(opt);
 	opt.addEventListener('click', () => {
-		currentPage = json.Scene1.PAGES[currentPage].NextPage;
-		pageNum = Object.keys(json.Scene1.PAGES).indexOf(currentPage);
+		pageNum++;
+		currentPage = Object.keys(json.Scene1.PAGES)[pageNum];
 		initialize(json)
 	})
-	
-}
-
-function handleOptions(data){
-	
-	//Cleans it out
-	$optionsbox.innerHTML = "";
-
-	if(data.Scene1.PAGES[currentPage].hasOwnProperty('Options')){
-		var o = data.Scene1.PAGES[currentPage].Options;
-		var str = Object.keys(o).forEach(k => {
-			const row = document.createElement('div');
-			row.innerHTML = `${k}`
-			$optionsbox.appendChild(row);
-			row.addEventListener('click', () => { 
-				currentPage = (o[k]);
-				pageNum = Object.keys(json.Scene1.PAGES).indexOf(currentPage);
-				initialize(json); 
-			})
-			
-		})
-	}
 	
 }
 
