@@ -68,14 +68,18 @@ async function initialize(data){
 	
 	$textbox.innerText = data.Scene1.PAGES[currentPage].PageText; 
 
-	const opt = document.createElement('div');
-	opt.innerHTML = data.Scene1.PAGES[currentPage].Options;
-	$optionsbox.appendChild(opt);
-	opt.addEventListener('click', () => {
-		pageNum++;
-		currentPage = Object.keys(json.Scene1.PAGES)[pageNum];
-		initialize(json)
-	})
+	
+	if(!checkPage){
+		const opt = document.createElement('div');
+		opt.innerHTML = data.Scene1.PAGES[currentPage].Options;
+		$optionsbox.appendChild(opt);
+		opt.addEventListener('click', () => {
+			pageNum++;
+			currentPage = Object.keys(json.Scene1.PAGES)[pageNum];
+			initialize(json)
+		})
+	}
+
 	
 }
 
