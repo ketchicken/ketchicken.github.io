@@ -87,7 +87,7 @@ function checkPage(data){
 //Handles page turning when right or left arrow key is pressed 
 document.addEventListener('keydown', (e) => {
 	if(!json) return;
-	if(e.key == "ArrowRight" && checkPage(json)){
+	if(e.key == "Space" && checkPage(json)){
 		
 		if(json.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')){
 			if(json.Scene1.PAGES[currentPage].NextPage == "End"){
