@@ -63,6 +63,7 @@ async function grabData() {
 // Initializes the data & also handles page turning 
 async function initialize(data){
 	$textbox.innerText = ''; 
+	$optionsbox.innerHTML = "";
 	
 	//Changes appropriate HTML elements to the new attributes based on the data given when page turns/ program is initialized
 	
@@ -116,7 +117,7 @@ document.addEventListener('keydown', (e) => {
 		}
 		
 		initialize(json);
-		handleOptions(json);
+		//handleOptions(json);
 	}
 	else return;
 });
