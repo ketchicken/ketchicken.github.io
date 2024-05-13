@@ -91,7 +91,7 @@ function checkPage(data){
 //Handles page turning when right or left arrow key is pressed 
 document.addEventListener('keydown', (e) => {
 	if(!json) return;
-	if(e.key == "ArrowLeft" && checkPage(json)){
+	if(e.key == "ArrowRight" && checkPage(json)){
 		
 		if(json.Scene1.PAGES[currentPage].hasOwnProperty('NextPage')){
 			if(json.Scene1.PAGES[currentPage].NextPage == "End"){
@@ -100,13 +100,8 @@ document.addEventListener('keydown', (e) => {
 			currentPage = json.Scene1.PAGES[currentPage].NextPage;
 			
 		}
-		else {
-			pageNum++;
-			currentPage = Object.keys(json.Scene1.PAGES)[pageNum];
-		}
 		
 		initialize(json);
-		//handleOptions(json);
 	}
 	else return;
 });
